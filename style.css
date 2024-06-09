@@ -1,0 +1,234 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, p, span {
+    font-family: "Archivo", sans-serif !important;
+}
+
+#home {
+    background-image: url('images/OIG4.BN2vwo7KGbltD.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#title {
+    color: white;
+    font-size: 30px;
+}
+
+#home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* adjust the opacity and color as needed */
+}
+
+.uk-navbar-item.uk-logo {
+    width: 200px;
+    height: 50px;
+}
+
+/* Add a background color to the navbar when it's sticky */
+.uk-navbar-sticky {
+    background-color: #006d77;
+}
+
+/* Change the background color of the navbar when the user scrolls down */
+.uk-navbar-container.uk-sticky {
+    transition: background-color 0.3s ease;
+}
+
+.uk-navbar-container.uk-sticky .uk-navbar-sticky {
+    background-color: #005f67;
+}
+
+/* Change the color of the active navbar link to white, and the color of the other links to a different color */
+.uk-navbar-container.uk-sticky .uk-navbar-nav>li>a:active {
+    color: #fff;
+}
+
+.uk-navbar-container.uk-sticky .uk-navbar-nav>li>a:not(:active) {
+    color: #edf2f4;
+}
+
+#portfolio {
+    background-color: #edf2f4;
+}
+
+#services {
+    background-color: #e29578;
+}
+
+#services h2 {
+    margin-top: 0;
+}
+
+#services .uk-card {
+    padding: 50px 20px;
+}
+
+#services .uk-card-title {
+    margin-top: 20px;
+}
+
+#services .uk-text-muted {
+    margin-top: 0;
+}
+
+#services .uk-margin-bottom {
+    display: inline-block;
+    color: #2a9d8f;
+}
+
+#services .uk-margin-bottom svg {
+    stroke-width: 2;
+}
+
+#contact {
+    background-color: #edf2f4;
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact .uk-margin {
+    margin-bottom: 20px;
+}
+
+#contact .uk-button {
+    background-color: #2a9d8f;
+    border-color: #2a9d8f;
+}
+
+#contact .uk-button:hover {
+    background-color: #21867a;
+    border-color: #21867a;
+    color: #fff;
+}
+
+#footer {
+    background-color: #006d77;
+}
+
+.uk-card.uk-card-default {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Interactive */
+.uk-navbar-container.uk-sticky {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.uk-navbar-container.uk-sticky .uk-navbar-sticky {
+    background-color: #005f67;
+    padding: 10px 0;
+}
+
+.uk-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.uk-button:hover {
+    background-color: #21867a;
+    transform: scale(1.05);
+}
+
+.uk-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uk-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+}
+
+
+@media (max-width: 960px) {
+    #services .uk-child-width-1-3@m {
+        margin-top: 40px;
+    }
+
+    #contact .uk-child-width-1-2@m {
+        margin-top: 40px;
+    }
+    #about img {
+        display: block;
+        margin: 0 auto;
+    }
+    #about h2, p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .uk-navbar-item.uk-logo {
+        width: 150px;
+        height: 25px;
+    }
+    #services .uk-child-width-1-3@m {
+        margin-top: 20px;
+    }
+
+    #contact .uk-child-width-1-2@m {
+        margin-top: 20px;
+    }
+
+    #contact form {
+        margin-top: 0;
+    }
+    #about img, h2, p {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .uk-navbar-item.uk-logo {
+        width: 100px;
+        height: 20px;
+    }
+    #services .uk-card {
+        padding: 30px 15px;
+    }
+
+    #services .uk-card-title {
+        font-size: 1.2rem;
+    }
+
+    #services .uk-margin-bottom svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    #contact .uk-child-width-1-2@m {
+        flex-direction: column;
+    }
+    #about img, h2, p {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+}
